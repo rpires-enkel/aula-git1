@@ -5,7 +5,13 @@ pipeline {
 
         stage('build') {
             steps {
-                echo 'Fazendo o step build...'
+                echo 'Fazendo o step 1 build...'
+            }
+            steps {
+                echo 'Fazendo o step 2 build...'
+            }
+            steps {
+                echo 'Fazendo o step 3 build...'
             }
         }
         stage('test') {
@@ -13,11 +19,7 @@ pipeline {
                 echo 'Testando o build...'
             }
         }
-        stage('deploy') {
-            steps {
-                echo 'Deployiando o build...'
-            }
-        }
+
 
     }
 }
