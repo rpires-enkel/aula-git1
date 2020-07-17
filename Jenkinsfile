@@ -11,13 +11,13 @@ pipeline {
             }
         }
 
-        stage('deploy') {
-            steps {
-                echo 'Fazendo o deploy 1...'
-                echo 'Fazendo o deploy 2...'
-                echo 'Fazendo o deploy 3...'
-            }
-        }
+        // stage('deploy') {
+        //     steps {
+        //         echo 'Fazendo o deploy 1...'
+        //         echo 'Fazendo o deploy 2...'
+        //         echo 'Fazendo o deploy 3...'
+        //     }
+        // }
 
 
     }
