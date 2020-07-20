@@ -3,7 +3,10 @@ env.MYTOOL_VERSION = '1.33'
 pipeline {
     agent any
     environment {
-        
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}"""
     }
 
     stages {
@@ -12,6 +15,7 @@ pipeline {
                 echo 'Fazendo o step 1 build...'
                 sh 'echo ${MYTOOL_VERSION}'
                 sh 'ls -l /tmp'
+                sh 'printenv'
             }
         }
 
