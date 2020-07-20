@@ -14,13 +14,17 @@ pipeline {
             }
         }
 
-        // stage('deploy') {
-        //     steps {
-        //         echo 'Fazendo o deploy 1...'
-        //         echo 'Fazendo o deploy 2...'
-        //         echo 'Fazendo o deploy 3...'
-        //     }
-        // }
+        stage('deploy') {
+            when {
+                    expression {
+                        currentBuild.result == null || currentBuild.result == 'SUCCESS'
+                    }
+                }
+
+            steps {
+                sh 'echo "uaua"'
+            }
+        }
 
     }
 }
