@@ -31,6 +31,12 @@ pipeline {
                 sh 'echo "uaua"'
             }
         }
+    } // end stages
+
+    post {
+        failure {
+            echo "xiii deu ruim"
+        }
     }
 
 }
