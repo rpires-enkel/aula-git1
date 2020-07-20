@@ -7,6 +7,8 @@ pipeline {
             steps {
                 echo 'Fazendo o step 1 build...'
                 echo 'Fazendo o step 2 build...'
+                echo 'Fazendo o step 3 build...'
+                echo 'Fazendo o step 4 build...'
                 sh 'ls -l /tmp'
             }
         }
