@@ -9,7 +9,6 @@ pipeline {
             steps {
                 echo 'Fazendo o step 1 build...'
                 sh 'echo ${MYTOOL_VERSION}'
-                echo 'Fazendo o step 3 build...'
                 sh 'ls -l /tmp'
             }
         }
@@ -22,6 +21,7 @@ pipeline {
                 }
 
             steps {
+                echo currentBuild.result
                 sh 'echo "uaua"'
             }
         }
