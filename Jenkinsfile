@@ -1,4 +1,5 @@
 env.MYTOOL_VERSION = '1.33'
+env.PATH
 
 pipeline {
     agent any
@@ -10,9 +11,7 @@ pipeline {
                 echo 'Fazendo o step 1 build...'
                 sh 'echo ${MYTOOL_VERSION}'
                 sh 'echo ${PATH}'
-                //sh 'echo ${env.BUILD_ID}'
                 echo 'Fazendo o step 3 build...'
-                echo 'Fazendo o step 4 build...'
                 sh 'ls -l /tmp'
             }
         }
