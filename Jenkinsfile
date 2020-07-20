@@ -2,9 +2,11 @@ env.MYTOOL_VERSION = '1.33'
 
 pipeline {
     agent any
+    environment {
+        
+    }
 
     stages {
-
         stage('build') {
             steps {
                 echo 'Fazendo o step 1 build...'
@@ -26,6 +28,6 @@ pipeline {
                 sh 'echo "uaua"'
             }
         }
-
     }
+
 }
