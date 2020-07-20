@@ -1,8 +1,8 @@
+env.MYTOOL_VERSION = '1.33'
+
 pipeline {
     agent any
 
-    env.MYTOOL_VERSION = '1.33'
-    
     stages {
 
         stage('build') {
