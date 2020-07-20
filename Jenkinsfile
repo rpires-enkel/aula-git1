@@ -9,8 +9,8 @@ pipeline {
             steps {
                 echo 'Fazendo o step 1 build...'
                 sh 'echo ${MYTOOL_VERSION}'
-                sh 'echo ${env.PATH}'
-                sh 'echo ${env.BUILD_ID}'
+                sh 'echo ${PATH}'
+                //sh 'echo ${env.BUILD_ID}'
                 echo 'Fazendo o step 3 build...'
                 echo 'Fazendo o step 4 build...'
                 sh 'ls -l /tmp'
