@@ -12,9 +12,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Fazendo o step 1 build...'
+                //echo 'Fazendo o step 1 build...'
                 sh 'echo ${MYTOOL_VERSION}'
-                sh 'ls -l /tmp'
+                //sh 'ls -l /tmp'
+                echo $CC
                 sh 'printenv'
             }
         }
